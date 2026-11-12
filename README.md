@@ -38,6 +38,16 @@ The virtual machine is deployed inside a dedicated virtual network and subnet. A
 
 **Architecture diagram:** [View Azure Infrastructure Architecture](architecture/azure-architecture.md)
 
+## Technical Documentation
+
+Detailed technical documentation is available below:
+
+| Document | Description |
+|---|---|
+| [Deployment Guide](docs/deployment-guide.md) | Azure infrastructure provisioning, Ubuntu setup and Nginx deployment. |
+| [Security Configuration](docs/security-configuration.md) | Azure NSG, Ubuntu UFW, SSH authentication and server hardening. |
+| [Troubleshooting Guide](docs/troubleshooting.md) | Real issues, investigation steps, solutions and lessons learned. |
+  
 ### Azure Resources
 
 | Resource | Configuration |

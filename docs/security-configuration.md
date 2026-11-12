@@ -216,4 +216,3 @@ Implemented controls:
 - [ ] HTTPS/TLS configured
 - [ ] Centralized monitoring and security alerts
 - [ ] Production security assessment
-  

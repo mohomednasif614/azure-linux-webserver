@@ -194,4 +194,3 @@ A practical troubleshooting workflow:
 This project provided practical experience with Azure VM lifecycle operations, OpenSSH, Linux service management, host firewall safety, Nginx logs, Git, and GitHub documentation.
 
 The documented observations reflect a hands-on learning environment rather than a comprehensive production incident-response assessment.
-  

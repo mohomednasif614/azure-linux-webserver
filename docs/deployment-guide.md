@@ -175,4 +175,3 @@ This is a single-VM learning deployment, not a production-certified architecture
 The website uses HTTP rather than HTTPS. There is no configured custom domain, load balancer, automated backup, deployment pipeline, or high-availability architecture.
 
 Future work may include TLS, infrastructure automation, monitoring alerts, backup validation, and repeatable deployment workflows.
-  

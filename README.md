@@ -36,7 +36,7 @@ The project uses a single Ubuntu virtual machine hosted in Microsoft Azure.
 
 The virtual machine is deployed inside a dedicated virtual network and subnet. An Azure Network Security Group controls incoming traffic, while UFW provides an additional host-level firewall.
 
-**Architecture diagram:** To be added.
+**Architecture diagram:** [View Azure Infrastructure Architecture](architecture/azure-architecture.md)
 
 ### Azure Resources
 

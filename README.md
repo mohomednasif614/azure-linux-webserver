@@ -116,6 +116,30 @@ The following checks were completed:
 - Public website successfully displayed in a browser.
 - Custom HTML page rendered successfully.
 
+## Deployment Evidence
+
+The following screenshots document the Azure deployment, web hosting, SSH administration, security configuration, and VM lifecycle management.
+
+### 1. Azure Virtual Machine Overview
+
+![Azure Ubuntu VM Overview](screenshots/01-azure-vm-overview.png)
+
+### 2. Custom Nginx Website
+
+![Azure-hosted custom website](screenshots/02-nginx-website.png)
+
+### 3. SSH Remote Administration
+
+![Successful SSH connection](screenshots/03-ssh-connection.png)
+
+### 4. SSH Hardening
+
+![SSH security configuration verification](screenshots/04-ssh-hardening.png)
+
+### 5. Virtual Machine Deallocation
+
+![Azure VM stopped and deallocated](screenshots/05-vm-deallocated.png)
+  
 ## System Monitoring and Troubleshooting
 
 Linux commands used during the project:
@@ -172,8 +196,8 @@ Cost-conscious practices included:
 - [x] SSH hardening completed
 - [x] Basic server monitoring completed
 - [x] VM deallocated after testing
-- [ ] Architecture diagram
-- [ ] Deployment screenshots
+- [x] Architecture diagram
+- [x] Deployment screenshots
 - [ ] Detailed technical documentation
 - [ ] HTTPS implementation
 

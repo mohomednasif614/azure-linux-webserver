@@ -1,0 +1,31 @@
+# SSH private keys
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*credentials*.json
+*secrets*.json
+
+# macOS files
+.DS_Store
+.AppleDouble
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary and log files
+*.log
+*.tmp
+*.swp
+*~
+
+# Terraform state files (for future use)
+*.tfstate
+*.tfstate.*
+.terraform/

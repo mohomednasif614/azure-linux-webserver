@@ -2,27 +2,37 @@
 # Azure Linux Web Server Architecture
 
 ```mermaid
-flowchart TB
-    USER["MacBook / Internet Client"]
-    PIP["Standard Static Public IPv4"]
-    subgraph AZ["Microsoft Azure — India South Central"]
-        subgraph RG["Resource Group: rg-azure-linux-webserver"]
-            subgraph VNET["VNet: vnet-linux-webserver — 10.0.0.0/16"]
-                subgraph SUB["Subnet: snet-web — 10.0.1.0/24"]
-                    NSG["Subnet NSG: nsg-linux-webserver"]
-                    VM["Ubuntu VM: vm-ubuntu-web01 — 10.0.1.4"]
-                    UFW["Ubuntu UFW Firewall"]
-                    NGINX["Nginx Web Server"]
-                    NSG --> VM
-                    VM --> UFW
-                    UFW --> NGINX
-                end
-            end
-        end
-    end
-    USER -->|"SSH 22 — trusted IP / HTTP 80"| PIP
-    PIP --> NSG
+flowchart TD
+    A["MacBook - Administrator and Browser"]
+    B["Azure Static Public IP"]
+    C["Azure NSG - SSH 22 and HTTP 80"]
+    D["Ubuntu VM - vm-ubuntu-web01"]
+    E["UFW Host Firewall"]
+    F["Nginx Web Server - Port 80"]
+    G["Custom HTML Website"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
 ```
 
-The diagram represents the logical traffic path. The Standard Static Public IP is associated with the VM's network interface, and the NSG is associated with the subnet.
+## Azure Infrastructure Details
+
+- Region: India South Central
+- Resource Group: `rg-azure-linux-webserver`
+- VNet: `vnet-linux-webserver` (`10.0.0.0/16`)
+- Subnet: `snet-web` (`10.0.1.0/24`)
+- NSG: `nsg-linux-webserver` (associated with subnet)
+- VM: `vm-ubuntu-web01`
+- Private IP: `10.0.1.4`
+- Public IP: Standard Static IPv4
+- OS: Ubuntu Server 24.04 LTS
+- Web server: Nginx
+
+**Note:** This is a simplified logical architecture diagram.
+The public IP is associated with the VM network interface.
+The NSG filters subnet traffic and UFW filters traffic on the VM.
   

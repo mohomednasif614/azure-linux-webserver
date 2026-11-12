@@ -208,7 +208,7 @@ Cost-conscious practices included:
 - [x] VM deallocated after testing
 - [x] Architecture diagram
 - [x] Deployment screenshots
-- [ ] Detailed technical documentation
+- [x] Detailed technical documentation
 - [ ] HTTPS implementation
 
 ## Future Improvements

@@ -48,6 +48,36 @@ Detailed technical documentation is available below:
 | [Security Configuration](docs/security-configuration.md) | Azure NSG, Ubuntu UFW, SSH authentication and server hardening. |
 | [Troubleshooting Guide](docs/troubleshooting.md) | Real issues, investigation steps, solutions and lessons learned. |
 
+## Azure CLI Automation
+
+This project includes a reusable Bash script for inspecting existing Azure infrastructure using Azure CLI.
+
+### Infrastructure Health Check
+
+**Script:** [`scripts/check-infrastructure.sh`](scripts/check-infrastructure.sh)
+
+The script performs four read-only checks:
+
+1. Verifies the selected Azure subscription.
+2. Checks the resource group's provisioning state.
+3. Retrieves the Ubuntu VM power state.
+4. Lists deployed Azure resources.
+
+### Requirements
+
+- Azure CLI installed on the local machine.
+- An authenticated Azure account with permission to read the resources.
+- Bash shell.
+
+### Usage
+
+```bash
+az login
+./scripts/check-infrastructure.sh
+```
+
+**Note:** This script does not start, stop, modify, or create Azure resources. It reports Azure control-plane information, not guest OS or application health.
+  
 ### Azure Resources
 
 | Resource | Configuration |
